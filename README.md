@@ -112,7 +112,19 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
+## Set: Default JSON
+/djangoRestTutorial/settings.py
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    )
+}
+
 ## Run
 ```sh
 python3 manage.py runserver
 ```
+
